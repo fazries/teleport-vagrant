@@ -1,0 +1,27 @@
+#
+# Sample Teleport configuration file.
+#
+teleport:
+  nodename: rabbitmq-n2
+  data_dir: /var/lib/teleport
+  pid_file: /var/run/teleport.pid
+  auth_token: chengaingoh1Isengo9bahtoo0Ai8Ae5 
+  auth_servers:
+  - 172.20.20.20:3025
+  connection_limits:
+    max_connections: 1000
+    max_users: 250
+  log:
+    output: stderr
+    severity: INFO
+  ca_pin: ""
+
+ssh_service:
+  enabled: "yes"
+  listen_addr: 0.0.0.0:3022
+  labels:
+      role: rabbitmq
+      type: rabbitmq
+
+proxy_service:
+    enabled: false
