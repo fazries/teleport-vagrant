@@ -16,3 +16,8 @@ run the output on new node to join the cluster
 
 $ sudo tctl users add $USER root
 
+# using config file
+
+rename and put the config file on /etc/teleport.yaml
+
+run it using `sudo teleport start -c /etc/teleport.yaml`
